@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "npm run build",
+    "start": "http-server",
     "test": "cypress run",
     "cy:gui": "cypress open",
     "cy:cli": "cypress run"
