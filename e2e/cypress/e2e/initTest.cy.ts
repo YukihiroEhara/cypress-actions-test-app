@@ -3,7 +3,8 @@ describe("My First Test", () => {
     cy.visit("http://localhost:3000/");
     cy.contains("GitHub");
   });
-  it('add test', () => {
-    cy.contains("commitTest")
-  })
+  it("add test", () => {
+    cy.wait(15000);
+    cy.contains("commitTest");
+  });
 });
