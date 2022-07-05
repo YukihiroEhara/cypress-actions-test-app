@@ -4,7 +4,6 @@ describe("My First Test", () => {
     cy.contains("GitHub");
   });
   it("add test", () => {
-    cy.wait(15000);
     cy.contains("commitTest");
   });
 });
