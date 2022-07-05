@@ -16,6 +16,4 @@ jobs:
         uses: cypress-io/github-action@v4.1.1
         with:
           working-directory: e2e
-          install-command: npm install
-          build: npm run build
           start: npm start
