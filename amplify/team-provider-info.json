@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cypressactionstestap-dev-100802-authRole",
+      "UnauthRoleArn": "arn:aws:iam::306703177254:role/amplify-cypressactionstestap-dev-100802-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::306703177254:role/amplify-cypressactionstestap-dev-100802-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-cypressactionstestap-dev-100802-deployment",
+      "UnauthRoleName": "amplify-cypressactionstestap-dev-100802-unauthRole",
+      "StackName": "amplify-cypressactionstestap-dev-100802",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:306703177254:stack/amplify-cypressactionstestap-dev-100802/eba75600-fbfe-11ec-8b3d-0ab723ac1ee9",
+      "AmplifyAppId": "d227rgld2fl0co"
+    }
+  }
+}
