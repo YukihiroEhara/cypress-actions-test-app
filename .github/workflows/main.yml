@@ -8,13 +8,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - shell: bash
-        run: |
-          touch .env
-          echo -e "REACT_APP_AWS_REGION=${{ secrets.REACT_APP_AWS_REGION }}\n
-                    REACT_APP_AWS_APPSYNC_AUTHENTICATIONTYPE=${{ secrets.REACT_APP_AWS_APPSYNC_AUTHENTICATIONTYPE }}\n
-                    REACT_APP_AWS_APPSYNC_GRAPHQLENDPOINT=${{ secrets.REACT_APP_AWS_APPSYNC_GRAPHQLENDPOINT }}\n
-                    REACT_APP_AWS_APPSYNC_APIKEY=${{ secrets.REACT_APP_AWS_APPSYNC_APIKEY }}" >> .env
+      # - shell: bash
+      #   run: |
+      #     touch .env
+      #     echo -e "REACT_APP_AWS_REGION=${{ secrets.REACT_APP_AWS_REGION }}\n
+      #               REACT_APP_AWS_APPSYNC_AUTHENTICATIONTYPE=${{ secrets.REACT_APP_AWS_APPSYNC_AUTHENTICATIONTYPE }}\n
+      #               REACT_APP_AWS_APPSYNC_GRAPHQLENDPOINT=${{ secrets.REACT_APP_AWS_APPSYNC_GRAPHQLENDPOINT }}\n
+      #               REACT_APP_AWS_APPSYNC_APIKEY=${{ secrets.REACT_APP_AWS_APPSYNC_APIKEY }}" >> .env
       - name: Cypress rungs
         uses: cypress-io/github-action@v4
         with:
