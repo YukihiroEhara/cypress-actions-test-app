@@ -1,6 +1,6 @@
 describe("Authenticator:", function () {
   beforeEach(function () {
-    cy.visit("/");
+    cy.visit("http://localhost:3000");
   });
   describe("Text Check", () => {
     it("My First Test", () => {
