@@ -4,7 +4,7 @@ describe("Authenticator:", function () {
   });
   describe("Text Check", () => {
     it("My First Test", () => {
-      cy.get(selectors.topTitle).contains("GitHub Actions Test!!");
+      cy.get(selectors.topTitle).contains("GitHub Actions Test!!!!!");
     });
   });
 });
