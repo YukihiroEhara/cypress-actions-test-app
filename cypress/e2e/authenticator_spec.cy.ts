@@ -1,6 +1,6 @@
 describe("Authenticator:", function () {
   beforeEach(function () {
-    cy.visit("/", { responseTimeout: 120000 });
+    cy.visit("/");
   });
   describe("Text Check", () => {
     it("My First Test", () => {
