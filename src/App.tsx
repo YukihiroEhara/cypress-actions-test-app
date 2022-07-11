@@ -1,5 +1,6 @@
 import "./App.css";
 
+// console.log(process.env.REACT_APP_AWS_REGION);
 function App() {
   return (
     <div className="App">
