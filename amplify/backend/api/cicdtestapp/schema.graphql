@@ -9,9 +9,9 @@ type Todo @model {
   description: String
 }
 
+
 type Test @model {
   id: ID!
   name: String!
   description: String
-  test: String
 }

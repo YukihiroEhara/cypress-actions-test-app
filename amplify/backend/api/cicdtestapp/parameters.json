@@ -1,5 +1,12 @@
 {
   "AppSyncApiName": "cicdtestapp",
   "DynamoDBBillingMode": "PAY_PER_REQUEST",
-  "DynamoDBEnableServerSideEncryption": false
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthModeLastUpdated": "2022-07-12T04:42:40.243Z",
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authcicdtestappcaf7ef70",
+      "Outputs.UserPoolId"
+    ]
+  }
 }
