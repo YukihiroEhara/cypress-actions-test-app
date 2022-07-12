@@ -11,8 +11,7 @@ jobs:
       - shell: bash
         run: |
           touch .env
-          echo -e 
-          "REACT_APP_AWS_REGION=${{ secrets.REACT_APP_AWS_REGION }}
+          echo -e "REACT_APP_AWS_REGION=${{ secrets.REACT_APP_AWS_REGION }}
           REACT_APP_AWS_APPSYNC_GRAPHQLENDPOINT=${{ secrets.REACT_APP_AWS_APPSYNC_GRAPHQLENDPOINT }}
           REACT_APP_AWS_COGNITO_IDENTITY_POOL_ID=${{ secrets.REACT_APP_AWS_COGNITO_IDENTITY_POOL_ID }}
           REACT_APP_AWS_USER_POOLS_ID=${{ secrets.REACT_APP_AWS_USER_POOLS_ID }}
