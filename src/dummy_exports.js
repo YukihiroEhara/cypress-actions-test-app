@@ -22,7 +22,8 @@ const awsmobile = {
   aws_user_pools_web_client_id:
     process.env.REACT_APP_AWS_USER_POOLS_WEB_CLIENT_ID,
 
-  oauth: process.env.REACT_APP_OAUTH,
+  //   oauth: process.env.REACT_APP_OAUTH,
+  oauth: {},
   //   aws_cognito_username_attributes: [],
   aws_cognito_username_attributes: arrayChange(
     process.env.REACT_APP_AWS_COGNITO_USERNAME_ATTRIBUTES
@@ -40,7 +41,8 @@ const awsmobile = {
     process.env.REACT_APP_AWS_COGNITO_MFA_TYPES
   ),
   aws_cognito_password_protection_settings: {
-    passwordPolicyMinLength: process.env.REACT_APP_PASSWORDPOLICYMINLENGTH,
+    passwordPolicyMinLength: 8,
+    // passwordPolicyMinLength: process.env.REACT_APP_PASSWORDPOLICYMINLENGTH,
     passwordPolicyCharacters: arrayChange(
       process.env.REACT_APP_PASSWORDPOLICYCHARACTERS
     ),
