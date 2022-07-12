@@ -13,10 +13,7 @@ Amplify.configure(awsconfig);
 // console.log(process.env.REACT_APP_AWS_COGNITO_IDENTITY_POOL_ID);
 // console.log(process.env.REACT_APP_AWS_USER_POOLS_ID);
 console.log(process.env.REACT_APP_AWS_COGNITO_USERNAME_ATTRIBUTES);
-const str = "EMAIL";
-let array = [];
-array.push(str);
-console.log(array);
+
 function App() {
   return (
     <Authenticator>
