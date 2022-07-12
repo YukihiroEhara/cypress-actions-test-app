@@ -41,8 +41,8 @@ const awsmobile = {
     process.env.REACT_APP_AWS_COGNITO_MFA_TYPES
   ),
   aws_cognito_password_protection_settings: {
-    // passwordPolicyMinLength: 8,
-    passwordPolicyMinLength: process.env.REACT_APP_PASSWORDPOLICYMINLENGTH,
+    passwordPolicyMinLength: 8,
+    // passwordPolicyMinLength: process.env.REACT_APP_PASSWORDPOLICYMINLENGTH,
     passwordPolicyCharacters: arrayChange(
       process.env.REACT_APP_PASSWORDPOLICYCHARACTERS
     ),
