@@ -42,7 +42,7 @@ jobs:
           REACT_APP_AWS_COGNITO_VERIFICATION_MECHANISMS="$REACT_APP_AWS_COGNITO_VERIFICATION_MECHANISMS"" >> .env
       - name: secretsName
         run: |
-          echo "key = ${{secrets.TEST_SECRETS}}"
+          echo "key = $REACT_APP_AWS_REGION"
       - name: Cypress run
         uses: cypress-io/github-action@v4
         with:
