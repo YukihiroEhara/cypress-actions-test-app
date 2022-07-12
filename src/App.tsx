@@ -1,11 +1,21 @@
 import "./App.css";
+import { Authenticator } from "@aws-amplify/ui-react";
+import "@aws-amplify/ui-react/styles.css";
+import Amplify from "aws-amplify";
+import awsconfig from "./aws-exports";
+
+Amplify.configure(awsconfig);
 
 function App() {
   return (
-    <div className="App">
-      <p data-cy="top-title">GitHub Actions Test!!!!!</p>
-      <p>commitTest</p>
-    </div>
+    <Authenticator>
+      {({ signOut, user }: any) => (
+        <main>
+          <h1>Hello {user.username}</h1>
+          <button onClick={signOut}>Sign out</button>
+        </main>
+      )}
+    </Authenticator>
   );
 }
 
