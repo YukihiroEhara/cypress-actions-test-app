@@ -3,7 +3,7 @@
 
 const arrayChange = (str) => {
   let array = [];
-  str !== undefined && array.push(str);
+  str !== "empty" && array.push(str);
   return array;
 };
 
