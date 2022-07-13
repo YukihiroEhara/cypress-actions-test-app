@@ -35,3 +35,36 @@ export const onDeleteTodo = /* GraphQL */ `
     }
   }
 `;
+export const onCreateTest = /* GraphQL */ `
+  subscription OnCreateTest {
+    onCreateTest {
+      id
+      name
+      description
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateTest = /* GraphQL */ `
+  subscription OnUpdateTest {
+    onUpdateTest {
+      id
+      name
+      description
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteTest = /* GraphQL */ `
+  subscription OnDeleteTest {
+    onDeleteTest {
+      id
+      name
+      description
+      createdAt
+      updatedAt
+    }
+  }
+`;

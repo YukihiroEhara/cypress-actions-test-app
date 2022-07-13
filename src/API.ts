@@ -75,6 +75,39 @@ export type DeleteTodoInput = {
   id: string,
 };
 
+export type CreateTestInput = {
+  id?: string | null,
+  name: string,
+  description?: string | null,
+};
+
+export type ModelTestConditionInput = {
+  name?: ModelStringInput | null,
+  description?: ModelStringInput | null,
+  and?: Array< ModelTestConditionInput | null > | null,
+  or?: Array< ModelTestConditionInput | null > | null,
+  not?: ModelTestConditionInput | null,
+};
+
+export type Test = {
+  __typename: "Test",
+  id: string,
+  name: string,
+  description?: string | null,
+  createdAt: string,
+  updatedAt: string,
+};
+
+export type UpdateTestInput = {
+  id: string,
+  name?: string | null,
+  description?: string | null,
+};
+
+export type DeleteTestInput = {
+  id: string,
+};
+
 export type ModelTodoFilterInput = {
   id?: ModelIDInput | null,
   name?: ModelStringInput | null,
@@ -103,6 +136,21 @@ export type ModelIDInput = {
 export type ModelTodoConnection = {
   __typename: "ModelTodoConnection",
   items:  Array<Todo | null >,
+  nextToken?: string | null,
+};
+
+export type ModelTestFilterInput = {
+  id?: ModelIDInput | null,
+  name?: ModelStringInput | null,
+  description?: ModelStringInput | null,
+  and?: Array< ModelTestFilterInput | null > | null,
+  or?: Array< ModelTestFilterInput | null > | null,
+  not?: ModelTestFilterInput | null,
+};
+
+export type ModelTestConnection = {
+  __typename: "ModelTestConnection",
+  items:  Array<Test | null >,
   nextToken?: string | null,
 };
 
@@ -154,6 +202,54 @@ export type DeleteTodoMutation = {
   } | null,
 };
 
+export type CreateTestMutationVariables = {
+  input: CreateTestInput,
+  condition?: ModelTestConditionInput | null,
+};
+
+export type CreateTestMutation = {
+  createTest?:  {
+    __typename: "Test",
+    id: string,
+    name: string,
+    description?: string | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type UpdateTestMutationVariables = {
+  input: UpdateTestInput,
+  condition?: ModelTestConditionInput | null,
+};
+
+export type UpdateTestMutation = {
+  updateTest?:  {
+    __typename: "Test",
+    id: string,
+    name: string,
+    description?: string | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type DeleteTestMutationVariables = {
+  input: DeleteTestInput,
+  condition?: ModelTestConditionInput | null,
+};
+
+export type DeleteTestMutation = {
+  deleteTest?:  {
+    __typename: "Test",
+    id: string,
+    name: string,
+    description?: string | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
 export type GetTodoQueryVariables = {
   id: string,
 };
@@ -190,6 +286,42 @@ export type ListTodosQuery = {
   } | null,
 };
 
+export type GetTestQueryVariables = {
+  id: string,
+};
+
+export type GetTestQuery = {
+  getTest?:  {
+    __typename: "Test",
+    id: string,
+    name: string,
+    description?: string | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type ListTestsQueryVariables = {
+  filter?: ModelTestFilterInput | null,
+  limit?: number | null,
+  nextToken?: string | null,
+};
+
+export type ListTestsQuery = {
+  listTests?:  {
+    __typename: "ModelTestConnection",
+    items:  Array< {
+      __typename: "Test",
+      id: string,
+      name: string,
+      description?: string | null,
+      createdAt: string,
+      updatedAt: string,
+    } | null >,
+    nextToken?: string | null,
+  } | null,
+};
+
 export type OnCreateTodoSubscription = {
   onCreateTodo?:  {
     __typename: "Todo",
@@ -215,6 +347,39 @@ export type OnUpdateTodoSubscription = {
 export type OnDeleteTodoSubscription = {
   onDeleteTodo?:  {
     __typename: "Todo",
+    id: string,
+    name: string,
+    description?: string | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnCreateTestSubscription = {
+  onCreateTest?:  {
+    __typename: "Test",
+    id: string,
+    name: string,
+    description?: string | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnUpdateTestSubscription = {
+  onUpdateTest?:  {
+    __typename: "Test",
+    id: string,
+    name: string,
+    description?: string | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnDeleteTestSubscription = {
+  onDeleteTest?:  {
+    __typename: "Test",
     id: string,
     name: string,
     description?: string | null,

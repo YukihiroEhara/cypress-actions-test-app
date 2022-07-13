@@ -1,14 +1,22 @@
 describe("Authenticator:", function () {
   beforeEach(function () {
-    cy.visit("/");
+    cy.visit("/", {
+      headers: {
+        "Accept-Encoding": "gzip, deflate",
+      },
+    });
   });
   describe("Text Check", () => {
     it("My First Test", () => {
-      cy.get(selectors.topTitle).contains("GitHub Actions Test!!!");
+      cy.get(test.username).type("testAccount");
+      cy.get(test.password).type("ot1928d1");
+      cy.get(test.btn).click();
     });
   });
 });
-export const selectors = {
-  topTitle: '[data-cy="top-title"]',
-  root: "#root",
+
+export const test = {
+  username: `[placeholder="Username"]`,
+  password: `[placeholder="Password"]`,
+  btn: `[data-variation="primary"]`,
 };

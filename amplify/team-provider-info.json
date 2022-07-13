@@ -10,6 +10,11 @@
       "StackName": "amplify-cicdtestapp-dev-153806",
       "StackId": "arn:aws:cloudformation:ap-northeast-1:306703177254:stack/amplify-cicdtestapp-dev-153806/870aebd0-fe88-11ec-8187-06adbcd7380d",
       "AmplifyAppId": "d16krhuzjnyc88"
+    },
+    "categories": {
+      "auth": {
+        "cicdtestappcaf7ef70": {}
+      }
     }
   }
 }
